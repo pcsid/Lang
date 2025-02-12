@@ -7,7 +7,7 @@ load_dotenv()
 
 model = init_chat_model("gpt-4o-mini", model_provider="openai")
 
-'''
+
 #Part 1 - manual prompt
 input_text = input("Enter the text to translate: ")
 
@@ -22,4 +22,4 @@ messages = [
 #part 2 - streaming
 for token in model.stream(messages):
     print(token.content, end="", flush=True)
-'''
+
